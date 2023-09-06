@@ -1,0 +1,6 @@
+kafka:
+  properties:
+    application:
+      id: kstreamplify-travel-optimizer
+    prefix:
+      self: env.domain

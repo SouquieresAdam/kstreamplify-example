@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.asouquieres.kstreamplify.demo</groupId>
+    <artifactId>parent-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>parent-project</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kafka.version>3.4.1</kafka.version>
+        <kstreamplify.version>0.1.0-SNAPSHOT</kstreamplify.version>
+        <jackson.version>2.14.0</jackson.version>
+        <target.java.version>11</target.java.version>
+        <maven.compiler.source>${target.java.version}</maven.compiler.source>
+        <maven.compiler.target>${target.java.version}</maven.compiler.target>
+        <log4j.version>2.20.0</log4j.version>
+        <slf4j.version>1.7.26</slf4j.version>
+        <commons-configuration2.version>2.8.0</commons-configuration2.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+    </properties>
+    <modules>
+        <module>models</module>
+        <module>kstreams</module>
+    </modules>
+
+
+    <!-- Sonatype for kstreamplify snapshot before first official release -->
+    <repositories>
+        <repository>
+            <snapshots/>
+            <id>snapshots</id>
+            <name>sonatype-snapshot</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
+
+</project>
